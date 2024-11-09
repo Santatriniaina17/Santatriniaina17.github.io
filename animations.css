@@ -1,0 +1,33 @@
+.hide {
+  opacity: 0;
+  transition: linear 1s;
+  transform: translateX(-100px);
+}
+
+.hide-r {
+  transform: translateX(100px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* .bouncing-bubble { */
+/* animation: bouncing-animation 2s infinite; */
+/* animation-delay: 100ms; */
+/* } */
+
+/* @keyframes bouncing-animation { */
+/* 0% { */
+/* transform: translateY(0); */
+/* } */
+
+/* 50% { */
+/* transform: translateY(-40px); */
+/* } */
+
+/* 100% { */
+/* transform: translateY(40px); */
+/* } */
+/* } */

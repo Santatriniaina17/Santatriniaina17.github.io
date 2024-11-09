@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
+    <link href="animations.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Développeur Web Fullstack - Santatriniaina</title>
+    <script defer src="app.js"></script>
   </head>
   <body class="text-neutral-950 dark:text-neutral-50 dark:bg-neutral-900">
     <header
-      class="px-8 lg:px-16 py-4 flex justify-between items-center fixed w-full backdrop-blur-sm bg-neutral-900/80"
+      class="px-8 lg:px-16 py-4 flex justify-between items-center fixed w-full backdrop-blur-sm bg-neutral-900/80 z-10"
     >
       <p class="font-medium">dilan.santatra2000@gmail.com</p>
       <nav class="hidden lg:block">
@@ -52,18 +54,24 @@
     </header>
 
     <!-- HERO -->
-    <section class="px-6 py-20 lg:p-16">
-      <img
-        src="assets/images/profile.png"
-        alt="photo de Santatra"
-        class="h-32 w-32 bg-emerald-500 rounded-full mt-4"
-      />
-      <h1 class="text-2xl font-semibold mt-6">
-        <span class="text-emerald-500">Santatriniaina</span>
-        <span class="text-lg text-neutral-100">Sarobidy RANDRIAMBOLOLONA</span>
-        <div class="mt-6 max-w-[600px] text-4xl">
-          Développeur Web Fullstack | Création de Solutions Web
-        </div>
+    <section class="px-6 py-20 lg:p-16 relative">
+      <p
+        class="flex flex-col gap-4 md:flex-row md:gap-8 hide lg:mt-8 text-2xl font-semibold md:items-center md:max-w-[600px]"
+      >
+        <img
+          src="assets/images/profile.png"
+          alt="photo de Santatra"
+          class="h-32 w-32 bg-emerald-500 rounded-full mt-4"
+        />
+        <span class="flex flex-col lg:gap-4">
+          <span class="text-emerald-500">Santatriniaina</span>
+          <span class="text-lg text-neutral-100"
+            >Sarobidy RANDRIAMBOLOLONA</span
+          >
+        </span>
+      </p>
+      <h1 class="mt-6 text-4xl lg:text-6xl md:max-w-[600px] font-semibold">
+        Développeur Web Fullstack | Création de Solutions Web
       </h1>
       <p class="md:w-4/5 lg:w-3/5 mt-8">
         Je suis un développeur fullstack avec une passion pour la création
@@ -72,7 +80,7 @@
         solutions numériques impactantes.
       </p>
 
-      <div class="flex flex-col md:flex-row gap-4 mt-8">
+      <div class="flex flex-col md:flex-row gap-4 mt-8 md:w-fit">
         <a
           href="assets/cv.pdf"
           target="_blank"
@@ -113,11 +121,14 @@
           +261 34 07 630 23
         </p>
       </div>
+      <!-- <div -->
+      <!-- class="hidden absolute right-56 bottom-72 lg:block bouncing-bubble w-16 h-16 bg-emerald-600" -->
+      <!-- ></div> -->
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="p-6 lg:p-16">
-      <h2 class="text-3xl lg:text-4xl font-semibold mb-8">
+      <h2 class="text-3xl lg:text-4xl font-semibold mb-8 hide">
         <span class="text-emerald-500 text-4xl font-semibold inline-block w-16"
           >01.</span
         >
@@ -125,8 +136,11 @@
       </h2>
 
       <div class="md:pl-16">
-        <article class="mb-8">
-          <h3 class="text-lg font-semibold mb-2">Biographie</h3>
+        <article class="mb-12">
+          <h3 class="text-lg font-semibold mb-4 flex gap-4 items-baseline">
+            <div class="w-4 h-2 bg-emerald-500"></div>
+            Biographie
+          </h3>
           <p class="text-lg max-w-[640px]">
             Diplômé en informatique, j'ai acquis de l'expérience en
             développement web à travers des projets académiques et personnels.
@@ -138,9 +152,12 @@
           </p>
         </article>
 
-        <article class="mb-8">
-          <h3 class="text-lg font-semibold mb-2">Compétences techniques</h3>
-          <dl class="list-none grid md:grid-cols-2 gap-4 pt-4">
+        <article class="mb-12">
+          <h3 class="text-lg font-semibold mb-2 flex gap-4 items-baseline">
+            <div class="w-4 h-2 bg-emerald-500"></div>
+            Compétences techniques
+          </h3>
+          <dl class="list-none grid md:grid-cols-2 gap-4 lg:gap-8 pt-4">
             <li>
               <dt class="font-semibold text-emerald-500 mb-4">Frontend</dt>
               <dd>
@@ -175,7 +192,7 @@
                             id="Dribbble-Light-Preview"
                             transform="translate(-61.000000, -7639.000000)"
                             fill="#000000"
-                            class="fill-neutral-100 hover:fill-red-600"
+                            class="fill-neutral-100 hover:fill-white"
                           >
                             <g
                               id="icons"
@@ -201,7 +218,7 @@
                       viewBox="0 0 512 512"
                       enable-background="new 0 0 512 512"
                       xml:space="preserve"
-                      class="fill-neutral-100 h-8 w-8 mb-2 hover:fill-blue-500"
+                      class="fill-neutral-100 h-8 w-8 mb-2 hover:fill-white"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g
@@ -250,7 +267,7 @@
                             id="Dribbble-Light-Preview"
                             transform="translate(-420.000000, -7479.000000)"
                             fill="#000000"
-                            class="fill-neutral-100 hover:fill-yellow-500"
+                            class="fill-neutral-100 hover:fill-white"
                           >
                             <g
                               id="icons"
@@ -537,12 +554,13 @@
         </article>
 
         <article class="my-8">
-          <h3 class="text-lg font-semibold my-8 mt-10">
+          <h3 class="text-lg font-semibold mb-2 flex gap-4 items-baseline">
+            <div class="w-4 h-2 bg-emerald-500"></div>
             Compétences interpersonnelles:
           </h3>
-          <ul class="grid grid-cols-2 md:grid-cols-3 gap-1">
+          <ul class="grid grid-cols-2 md:grid-cols-3 gap-1 lg:gap-2 pt-4">
             <li
-              class="flex flex-col gap-4 p-8 items-center justify-center bg-neutral-800"
+              class="flex flex-col gap-4 p-8 items-center justify-center bg-gradient-to-tl from-neutral-900 to-neutral-800 rounded-lg shadow-inner shadow-emerald-500"
             >
               <svg
                 class="w-12 h-12"
@@ -591,10 +609,10 @@
                   </g>
                 </g>
               </svg>
-              <span>Esprit d'équipe</span>
+              <span class="font-semibold">Esprit d'équipe</span>
             </li>
             <li
-              class="flex flex-col gap-4 p-8 items-center justify-center bg-neutral-800"
+              class="flex flex-col gap-4 p-8 items-center justify-center bg-gradient-to-tl from-neutral-900 to-neutral-800 rounded-lg shadow-inner shadow-emerald-500"
             >
               <svg
                 class="w-12 h-12 fill-neutral-100"
@@ -636,10 +654,10 @@
                   </g>
                 </g>
               </svg>
-              <span>Organisation</span>
+              <span class="font-semibold">Organisation</span>
             </li>
             <li
-              class="flex flex-col gap-4 p-8 items-center justify-center bg-neutral-800 col-span-2 md:col-span-1"
+              class="flex flex-col gap-4 p-8 items-center justify-center bg-gradient-to-tl from-neutral-900 to-neutral-800 col-span-2 md:col-span-1 rounded-lg shadow-inner shadow-emerald-500"
             >
               <svg
                 class="h-12 w-12 fill-neutral-100"
@@ -675,7 +693,7 @@
                   ></path>
                 </g>
               </svg>
-              Soif d'apprendre
+              <span class="font-semibold"> Soif d'apprendre </span>
             </li>
           </ul>
         </article>
@@ -692,16 +710,19 @@
       </h2>
       <ul>
         <li
-          class="bg-neutral-800 ring-1 ring-neutral-700 rounded-sm mb-8 md:grid grid-cols-2"
+          class="bg-gradient-to-tl from-neutral-900 to-neutral-800 ring-1 ring-neutral-700 rounded-sm lg:rounded-lg overflow-hidden mb-8 md:grid grid-cols-2 hide hide-r lg:max-w-[900px]"
         >
-          <div class="bg-neutral-900 aspect-video md:h-80">
+          <div class="bg-neutral-900 aspect-video">
             <img
               src="assets/images/gasikarako2.png"
               alt="gasikarako app preview"
             />
           </div>
-          <div class="p-2 md:pl-4 md:w-full">
-            <h3 class="mb-3 font-semibold text-lg">Gasikarako</h3>
+          <div class="p-2 md:pl-4 md:w-full lg:p-8">
+            <h3 class="text-lg font-semibold mb-4 flex gap-4 items-baseline">
+              <div class="w-4 h-2 bg-emerald-500"></div>
+              Gasikarako
+            </h3>
             <p class="mb-2">
               Conception d'un réseau social déstiner à la recherede de solutioin
               pour l'amélioration de Madagascar.
@@ -709,16 +730,19 @@
           </div>
         </li>
         <li
-          class="bg-neutral-800 ring-1 ring-neutral-700 rounded-sm mb-8 md:grid grid-cols-2"
+          class="bg-gradient-to-tl from-neutral-900 to-neutral-800 ring-1 ring-neutral-700 rounded-sm lg:rounded-lg overflow-hidden mb-8 md:grid grid-cols-2 hide lg:max-w-[900px]"
         >
-          <div class="bg-neutral-900 aspect-video md:h-80 overflow-hidden">
+          <div class="bg-neutral-900 aspect-video overflow-hidden">
             <img
               src="assets/images/global-tracking.jpg"
               alt="global-tracking app preview"
             />
           </div>
-          <div class="p-2 md:pl-4">
-            <h3 class="mb-3 font-semibold text-lg">Insitute Tracking</h3>
+          <div class="p-2 md:pl-4 md:w-full lg:p-8">
+            <h3 class="text-lg font-semibold mb-4 flex gap-4 items-baseline">
+              <div class="w-4 h-2 bg-emerald-500"></div>
+              Insitute Tracking
+            </h3>
             <p class="mb-2">
               Application de supervision basé sur l’IA de reconnaissance facial.
             </p>
@@ -729,17 +753,20 @@
           </div>
         </li>
         <li
-          class="bg-neutral-800 ring-1 ring-neutral-700 rounded-sm mb-8 md:grid grid-cols-2"
+          class="bg-gradient-to-tl from-neutral-900 to-neutral-800 ring-1 ring-neutral-700 rounded-sm lg:rounded-lg overflow-hidden mb-8 md:grid grid-cols-2 hide hide-r lg:max-w-[900px]"
         >
-          <div class="bg-neutral-900 aspect-video md:h-80">
+          <div class="bg-neutral-900 aspect-video">
             <img
               src="assets/images/e-fako.png"
               alt="e-fako app preview"
               class="h-full w-full object-cover"
             />
           </div>
-          <div class="p-2 md:pl-4">
-            <h3 class="mb-3 font-semibold text-lg">e-Fako</h3>
+          <div class="p-2 md:pl-4 md:w-full lg:p-8">
+            <h3 class="text-lg font-semibold mb-4 flex gap-4 items-baseline">
+              <div class="w-4 h-2 bg-emerald-500"></div>
+              e-Fako
+            </h3>
             <p class="mb-2">
               Une application web qui facilite la recherche de nettoyeur et qui
               contribut à la protection de l'environement.
@@ -760,27 +787,35 @@
         >
         Expériences
       </h2>
-      <div class="md:grid md:grid-cols-2 gap-8">
-        <article
-          class="bg-neutral-800 p-2 ring-1 ring-neutral-700 rounded-sm mb-4"
+      <ul class="md:grid md:grid-cols-2 gap-4">
+        <li
+          class="bg-gradient-to-tl from-neutral-900 to-neutral-800 p-2 ring-1 ring-neutral-700 rounded-sm mb-4 hide"
         >
-          <h3 class="font-semibold mb-4 text-lg">
-            Stage en développement web, CNaPS
-          </h3>
-          <p><span class="font-semibold">Durée:</span> Mars 2024 - Juin 2024</p>
-          <p><span class="font-semibold">Techno:</span>Java Spring, Angular</p>
-        </article>
+          <article>
+            <h3 class="font-semibold mb-4 text-lg">
+              Stage en développement web
+            </h3>
+            <p>
+              Un stage de trois mois (Mars 2024 - Juin 2024) chez
+              <span class="font-semibold">CNaPS</span>. Notre mission a été de
+              concevoir une application web pour la gestion des projets de
+              l'entreprise.
+            </p>
+          </article>
+        </li>
 
-        <article
-          class="bg-neutral-800 p-2 ring-1 ring-neutral-700 rounded-sm mb-4"
+        <li
+          class="bg-gradient-to-tl from-neutral-900 to-neutral-800 p-2 ring-1 ring-neutral-700 rounded-sm mb-4 hide"
         >
-          <h3 class="font-semibold mb-4 text-lg">Freelance</h3>
-          <p>
-            Création de petits sites web pour des projets personnels et pour des
-            amis ou des petites entreprises locales.
-          </p>
-        </article>
-      </div>
+          <article>
+            <h3 class="font-semibold mb-4 text-lg">Freelance</h3>
+            <p>
+              Création de petits sites web pour des projets personnels et pour
+              des amis ou des petites entreprises locales.
+            </p>
+          </article>
+        </li>
+      </ul>
     </section>
 
     <!-- CERTIFICATIONS and FORMATIONS -->
@@ -796,7 +831,7 @@
         <!-- <h3 class="text-xl font-semibold mb-4">Formations</h3> -->
         <ul>
           <li
-            class="bg-neutral-800 p-2 ring-1 ring-neutral-700 rounded-sm mb-4 max-w-[640px]"
+            class="bg-neutral-800 p-2 ring-1 ring-neutral-700 rounded-sm mb-4"
           >
             <div>
               <p class="font-semibold text-lg mb-4">
